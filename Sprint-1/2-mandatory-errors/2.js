@@ -1,5 +1,4 @@
-// Currently trying to print the string "I was born in Bolton" but it isn't working...
-// what's the error ?
+const cityOfBirth = "Bolton";           // declared and initialized
+console.log(`I was born in ${cityOfBirth}`);  // variable now accessible
 
-console.log(`I was born in ${cityOfBirth}`);
-const cityOfBirth = "Bolton";
+//Fixed Execution Order
