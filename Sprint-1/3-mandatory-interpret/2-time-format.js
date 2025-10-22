@@ -1,25 +1,20 @@
 const movieLength = 8784; // length of movie in seconds
 
+// Calculate remaining seconds after converting to minutes
 const remainingSeconds = movieLength % 60;
+
+// Total minutes (integer division)
 const totalMinutes = (movieLength - remainingSeconds) / 60;
 
+// Calculate remaining minutes after converting to hours
 const remainingMinutes = totalMinutes % 60;
+
+// Total hours (integer division)
 const totalHours = (totalMinutes - remainingMinutes) / 60;
 
-const result = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
-console.log(result);
+// Format the result as "hours:minutes:seconds"
+const movieDuration = `${totalHours}:${remainingMinutes}:${remainingSeconds}`;
 
-// For the piece of code above, read the code and then answer the following questions
+console.log(movieDuration);
 
-// a) How many variable declarations are there in this program?
-
-// b) How many function calls are there?
-
-// c) Using documentation, explain what the expression movieLength % 60 represents
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators
-
-// d) Interpret line 4, what does the expression assigned to totalMinutes mean?
-
-// e) What do you think the variable result represents? Can you think of a better name for this variable?
-
-// f) Try experimenting with different values of movieLength. Will this code work for all values of movieLength? Explain your answer
+//6 variable declaration and 1 function call done
