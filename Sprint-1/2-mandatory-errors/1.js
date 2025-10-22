@@ -3,5 +3,5 @@
 let age = 33;   // use 'let' instead of 'const'
 age = age + 1;  // reassigns 'age' by adding 1
 
-console.log(age); // Output: 34
+console.log(age);
 
