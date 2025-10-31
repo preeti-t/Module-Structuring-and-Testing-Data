@@ -1,13 +1,16 @@
-const getOrdinalNumber = require("./get-ordinal-number");
-// In this week's prep, we started implementing getOrdinalNumber
+function getOrdinalNumber(num) {
+  const remainder10 = num % 10;
+  const remainder100 = num % 100;
 
-// continue testing and implementing getOrdinalNumber for additional cases
-// Write your tests using Jest - remember to run your tests often for continual feedback
+  if (remainder10 === 1 && remainder100 !== 11) {
+    return `${num}st`;
+  } else if (remainder10 === 2 && remainder100 !== 12) {
+    return `${num}nd`;
+  } else if (remainder10 === 3 && remainder100 !== 13) {
+    return `${num}rd`;
+  } else {
+    return `${num}th`;
+  }
+}
 
-// Case 1: Identify the ordinal number for 1
-// When the number is 1,
-// Then the function should return "1st"
-
-test("should return '1st' for 1", () => {
-  expect(getOrdinalNumber(1)).toEqual("1st");
-});
+module.exports = getOrdinalNumber;
